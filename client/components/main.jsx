@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Main(props) {
   return (
-    <main className='border px-1'>
+    <main className='px-1'>
       <div>
         <h5>Our Story</h5>
         <div>
@@ -25,7 +25,7 @@ export default function Main(props) {
           </p>
           <div>
             <img className='w-100' src="./images/proposal.jpg" alt="Proposal"/>
-            <p><em>Thanks to the random lady who took the photo.</em></p>
+            <p className='text-center'><em>(Thanks to the random lady who took the photo.)</em></p>
           </div>
           <p>
             Now they look forward to spending the rest of their lives together and building a prosperous life together.
