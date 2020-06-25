@@ -4,11 +4,13 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import Nav from './nav';
 import Header from './header';
 import Main from './main';
+// import Location from './location';
 
 export default class App extends React.Component {
 
   render() {
     return (
+      // <Location></Location>
       <Router>
         <Nav></Nav>
         <Header></Header>
