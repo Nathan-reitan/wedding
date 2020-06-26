@@ -1,4 +1,6 @@
 import React from 'react';
+// const nodemailer = require('nodemailer');
+// let transporter = nodemailer.createTransport(transport[, defaults])
 
 export default class Rsvp extends React.Component {
   constructor(props) {
