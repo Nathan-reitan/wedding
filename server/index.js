@@ -10,6 +10,7 @@ const app = express();
 
 app.use(staticMiddleware);
 app.use(sessionMiddleware);
+app.use(express.json());
 
 async function main(guestInfo) {
   const transport = nodemailer.createTransport({
@@ -49,19 +50,17 @@ async function main(guestInfo) {
 }
 
 app.post('/api/rsvp', (req, res) => {
-  const guest1Name = req.body.guest1Name;
-  const guest1Meal = req.body.guest1Meal;
-  const guest1Allergies = req.body.guest1Allergies;
-  const guest2Name = req.body.guest2Name;
-  const guest2Meal = req.body.guest2Meal;
-  const guest2Allergies = req.body.guest2Allergies;
+  const guest1Name = req.body.name1;
+  const guest1Meal = req.body.meal1;
+  const guest1Allergies = req.body.allergies1;
+  const guest2Name = req.body.name2;
+  const guest2Meal = req.body.meal2;
+  const guest2Allergies = req.body.allergies2;
   const guestInfo = { guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies };
 
   main(guestInfo);
 
 });
-
-app.use(express.json());
 
 app.listen(process.env.PORT, () => {
   // eslint-disable-next-line no-console
