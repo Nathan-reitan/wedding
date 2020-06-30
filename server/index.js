@@ -1,5 +1,6 @@
 require('dotenv/config');
 const express = require('express');
+const nodemailer = require('nodemailer');
 
 // const db = require('./database');
 const staticMiddleware = require('./static-middleware');
@@ -9,6 +10,56 @@ const app = express();
 
 app.use(staticMiddleware);
 app.use(sessionMiddleware);
+
+async function main(guestInfo) {
+  const transport = nodemailer.createTransport({
+    host: 'smtp.mailtrap.io',
+    port: 2525,
+    auth: {
+      user: 'cdc5e43cfa8042',
+      pass: '88b4f46570bbe2'
+    }
+  });
+
+  const info = await transport.sendMail({
+    from: '"Wedding RSVP" <nathan@reitanfamily.com>',
+    to: 'nathanreitan@gmail.com',
+    subject: 'Wedding RSVP from: ' + guestInfo.guest1Name,
+    text: `
+      Guest 1: ${guestInfo.guest1Name},
+      Guest 1 Meal: ${guestInfo.guest1Meal},
+      Guest 1 Allergies: ${guestInfo.guest1Allergies},
+      Guest 2: ${guestInfo.guest2Name},
+      Guest 2 Meal: ${guestInfo.guest2Meal},
+      Guest 2 Allergies: ${guestInfo.guest2Allergies}
+    `,
+    html: `<ol>
+            <li>Guest 1: ${guestInfo.guest1Name},</li>
+            <li>Guest 1 Meal: ${guestInfo.guest1Meal},</li>
+            <li>Guest 1 Allergies: ${guestInfo.guest1Allergies},</li>
+            <li>Guest 2: ${guestInfo.guest2Name},</li>
+            <li>Guest 2 Meal: ${guestInfo.guest2Meal},</li>
+            <li>Guest 2 Allergies: ${guestInfo.guest2Allergies}</li>
+          </ol>`
+  });
+  // eslint-disable-next-line no-console
+  console.log('Message send" %s', info.messageId);
+  // eslint-disable-next-line no-console
+  console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+}
+
+app.post('/api/rsvp', (req, res) => {
+  const guest1Name = req.body.guest1Name;
+  const guest1Meal = req.body.guest1Meal;
+  const guest1Allergies = req.body.guest1Allergies;
+  const guest2Name = req.body.guest2Name;
+  const guest2Meal = req.body.guest2Meal;
+  const guest2Allergies = req.body.guest2Allergies;
+  const guestInfo = { guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies };
+
+  main(guestInfo);
+
+});
 
 app.use(express.json());
 

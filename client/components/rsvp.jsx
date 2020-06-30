@@ -1,20 +1,26 @@
 import React from 'react';
-// const nodemailer = require('nodemailer');
-// let transporter = nodemailer.createTransport(transport[, defaults])
 
 export default class Rsvp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      plusOne: null,
-      plusOneName: '',
-      meal: ''
+      name1: '',
+      meal1: '',
+      allergies1: '',
+      name2: '',
+      meal2: '',
+      allergies2: ''
     };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleChangeRadio = this.handleChangeRadio.bind(this);
   }
 
   handleChange(event) {
     this.setState({ [event.target.id]: event.target.value });
+  }
+
+  handleChangeRadio(event) {
+    this.setState({ [event.target.name]: event.target.value });
   }
 
   handleSubmit(event) {
@@ -29,6 +35,19 @@ export default class Rsvp extends React.Component {
     });
   }
 
+  sendInfo(guestInfo) {
+    fetch('/api/rsvp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ rsvp: guestInfo })
+    })
+      .then(response => response.json())
+      // eslint-disable-next-line no-console
+      .then(info => console.log(info));
+  }
+
   render() {
     return (
       <div>
@@ -37,7 +56,7 @@ export default class Rsvp extends React.Component {
             <h4>Guest 1:</h4>
             <div className='w-100'>
               <label htmlFor="name" className='w-50'>Name</label>
-              <input type="text" id='name' name='name' placeholder='First and Last Name'/>
+              <input type="text" id='name' name='name1' placeholder='First and Last Name' onChange={this.handleChange}/>
             </div>
           </div>
           <div className='w-100'>
@@ -45,25 +64,25 @@ export default class Rsvp extends React.Component {
             <div className='w-75 mx-2'>
               <div>
                 <label htmlFor="steak" className='w-50'>Steak</label>
-                <input type="radio" name='mealOption1' id='steak' value='steak'/>
+                <input type="radio" name='meal1' id='steak1' value='steak' onChange={this.handleChangeRadio}/>
               </div>
               <div>
                 <label htmlFor="fish" className='w-50'>Fish</label>
-                <input type="radio" name='mealOption1' id='fish' value='fish'/>
+                <input type="radio" name='meal1' id='fish1' value='fish' onChange={this.handleChangeRadio}/>
               </div>
               <div>
                 <label htmlFor="vegetarian" className='w-50'>Vegetarian</label>
-                <input type="radio" name='mealOption1' id='vegetarian' value='vegetarian'/>
+                <input type="radio" name='meal1' id='vegetarian1' value='vegetarian' onChange={this.handleChangeRadio}/>
               </div>
             </div>
             <div className='w-100'>
-              <label htmlFor="allergies1" className='w-50'>Allergies</label>
-              <input type="text" name="allergies" id="allergies1" placeholder='enter any allergies here' />
+              <label htmlFor="allergies1" className='w-50'>Allergies <br/>(if none, type none)</label>
+              <input type="text" name="allergies" id="allergies1" placeholder='enter any allergies here' onChange={this.handleChange} required/>
             </div>
             <h4>Guest 2:</h4>
             <div className='w-100'>
               <label htmlFor="name" className='w-50'>Name</label>
-              <input type="text" id='name' name='name' placeholder='First and Last Name' />
+              <input type="text" id='name' name='name2' placeholder='First and Last Name' onChange={this.handleChange}/>
             </div>
           </div>
           <div className='w-100'>
@@ -71,20 +90,20 @@ export default class Rsvp extends React.Component {
             <div className='w-75 mx-2'>
               <div>
                 <label htmlFor="steak" className='w-50'>Steak</label>
-                <input type="radio" name='mealOption2' id='steak' value='steak' />
+                <input type="radio" name='meal2' id='steak2' value='steak' onChange={this.handleChangeRadio}/>
               </div>
               <div>
                 <label htmlFor="fish" className='w-50'>Fish</label>
-                <input type="radio" name='mealOption2' id='fish' value='fish' />
+                <input type="radio" name='meal2' id='fish2' value='fish' onChange={this.handleChangeRadio}/>
               </div>
               <div>
                 <label htmlFor="vegetarian" className='w-50'>Vegetarian</label>
-                <input type="radio" name='mealOption2' id='vegetarian' value='vegetarian' />
+                <input type="radio" name='meal2' id='vegetarian2' value='vegetarian' onChange={this.handleChangeRadio}/>
               </div>
             </div>
             <div className='w-100'>
-              <label htmlFor="allergies2" className='w-50'>Allergies</label>
-              <input type="text" name="allergies" id="allergies2" placeholder='enter any allergies here' />
+              <label htmlFor="allergies2" className='w-50'>Allergies <br/>(if none, type none)</label>
+              <input type="text" name="allergies" id="allergies2" placeholder='enter any allergies here' onChange={this.handleChange} required/>
             </div>
           </div>
           <input type="submit" value='submit'/>
