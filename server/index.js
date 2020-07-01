@@ -15,7 +15,7 @@ app.use(express.json());
 async function main(guestInfo) {
   const transport = nodemailer.createTransport({
     host: 'reitanfamily.com',
-    port: 587,
+    port: 25,
     secure: true,
     auth: {
       user: 'nathan@reitanfamily.com',
