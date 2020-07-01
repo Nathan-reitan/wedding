@@ -14,11 +14,12 @@ app.use(express.json());
 
 async function main(guestInfo) {
   const transport = nodemailer.createTransport({
-    host: 'smtp.mailtrap.io',
-    port: 2525,
+    host: 'reitanfamily.com',
+    port: 587,
+    secure: true,
     auth: {
-      user: 'cdc5e43cfa8042',
-      pass: '88b4f46570bbe2'
+      user: 'nathan@reitanfamily.com',
+      pass: '!02MeSiTa'
     }
   });
 
@@ -58,7 +59,7 @@ app.post('/api/rsvp', (req, res) => {
   const guest2Allergies = req.body.allergies2;
   const guestInfo = { guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies };
 
-  main(guestInfo);
+  main(guestInfo).catch(console.error);
 
 });
 
