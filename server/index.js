@@ -17,8 +17,8 @@ async function main(guestInfo) {
     host: 'reitanfamily.com',
     port: 26,
     auth: {
-      user: 'nathan@reitanfamily.com',
-      pass: '!02MeSiTa'
+      user: process.env.NODEMAILER_USER,
+      pass: process.env.NODEMAILER_PASS
     },
     tls: {
       rejectUnauthorized: false
