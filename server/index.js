@@ -15,17 +15,19 @@ app.use(express.json());
 async function main(guestInfo) {
   const transport = nodemailer.createTransport({
     host: 'reitanfamily.com',
-    port: 25,
-    secure: true,
+    port: 26,
     auth: {
       user: 'nathan@reitanfamily.com',
       pass: '!02MeSiTa'
+    },
+    tls: {
+      rejectUnauthorized: false
     }
   });
 
   const info = await transport.sendMail({
     from: '"Wedding RSVP" <nathan@reitanfamily.com>',
-    to: 'nathanreitan@gmail.com',
+    to: 'nathanreitan@gmail.com, weddingreitan@gmail.com, kenziiee7139@gmail.com',
     subject: 'Wedding RSVP from: ' + guestInfo.guest1Name,
     text: `
       Guest 1: ${guestInfo.guest1Name},
