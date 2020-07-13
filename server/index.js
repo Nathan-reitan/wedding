@@ -27,7 +27,7 @@ async function main(guestInfo) {
 
   const info = await transport.sendMail({
     from: '"Wedding RSVP" <nathan@reitanfamily.com>',
-    to: 'nathanreitan@gmail.com, weddingreitan@gmail.com, kenziiee7139@gmail.com',
+    to: 'weddingreitan@gmail.com',
     subject: 'Wedding RSVP from: ' + guestInfo.guest1Name,
     text: `
       Guest 1: ${guestInfo.guest1Name},
