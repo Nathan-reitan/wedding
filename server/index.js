@@ -15,14 +15,12 @@ app.use(express.json());
 async function main(guestInfo) {
   const transport = nodemailer.createTransport({
     host: 'reitanfamily.com',
-    port: 26,
+    port: 465,
     auth: {
       user: process.env.NODEMAILER_USER,
       pass: process.env.NODEMAILER_PASS
     },
-    tls: {
-      rejectUnauthorized: false
-    }
+    secure: true
   });
 
   const info = await transport.sendMail({
