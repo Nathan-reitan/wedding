@@ -3,8 +3,8 @@ import React from 'react';
 export default function Main(props) {
   return (
     <main className='px-1'>
-      <div className='berkshire'>
-        <h5>Our Story</h5>
+      <div className='kaushan'>
+        <h5 className='berkshire'>Our Story</h5>
         <div>
           <p>
             Nathan and Mackenzie met in 2014 and went on their first date to Knottfest.
