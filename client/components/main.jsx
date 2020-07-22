@@ -3,7 +3,7 @@ import React from 'react';
 export default function Main(props) {
   return (
     <main className='px-1'>
-      <div>
+      <div className='berkshire'>
         <h5>Our Story</h5>
         <div>
           <p>
