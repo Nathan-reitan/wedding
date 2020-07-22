@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 body{
   background-color: grey;
@@ -10,6 +12,14 @@ nav{
 
 .cursive{
 font-family: 'Dancing Script', cursive;
+}
+
+.berkshire{
+  font-family: 'Berkshire Swash';
+}
+
+.kaushan{
+  font-family: 'Kaushan Script';
 }
 
 nav>div>ul>li>a{
