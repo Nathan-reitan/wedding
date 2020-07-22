@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// add Switch and Route to import statement above after router seperated by commas once incorporated
 import Nav from './nav';
 import Header from './header';
 import Main from './main';
