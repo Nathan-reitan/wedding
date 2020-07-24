@@ -8,9 +8,18 @@ export default function Hotels(props) {
       We have taken the time to locate some hotels in the area, please see the list below:
       </div>
       <ol>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+          Pala Mesa Resort
+          <a href="https://www.palamesa.com/">Website</a>
+        </li>
+        <li>
+          Quality Inn Fallbrook
+          <a href="https://www.choicehotels.com/california/fallbrook/quality-inn-hotels/caa69?source=gyxt">Website</a>
+        </li>
+        <li>
+          Pala Casino Spa & Resort
+          <a href="https://www.palacasino.com/">Website</a>
+        </li>
         <li></li>
         <li></li>
         <li></li>
