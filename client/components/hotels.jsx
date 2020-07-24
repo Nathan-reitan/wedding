@@ -9,7 +9,7 @@ export default function Hotels(props) {
           We have taken the time to locate some hotels in the area, please see the list below:
         </p>
         <p>
-          Estimate times are subject to traffic, please check the time morning of to get the most accurate time based on traffic
+          <em>Estimate times are subject to traffic, please check the time morning of to get the most accurate time based on traffic</em>
         </p>
       </div>
       <ol>
@@ -29,8 +29,6 @@ export default function Hotels(props) {
           Temecula Creek Inn (10 miles ~18mins)
           <a href="https://www.temeculacreekinn.com/?NCK=8664483612">Website</a>
         </li>
-        <li></li>
-        <li></li>
       </ol>
     </div>
   );
