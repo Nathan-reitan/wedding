@@ -20,7 +20,10 @@ export default function Hotels(props) {
           Pala Casino Spa & Resort (8.4 miles ~15mins)
           <a href="https://www.palacasino.com/">Website</a>
         </li>
-        <li></li>
+        <li>
+          Temecula Creek Inn
+          <a href="https://www.temeculacreekinn.com/?NCK=8664483612">Website</a>
+        </li>
         <li></li>
         <li></li>
       </ol>
