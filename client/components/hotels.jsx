@@ -13,7 +13,7 @@ export default function Hotels(props) {
           <a href="https://www.palamesa.com/">Website</a>
         </li>
         <li>
-          Quality Inn Fallbrook (3.6 miles)
+          Quality Inn Fallbrook (3.6 miles ~5mins)
           <a href="https://www.choicehotels.com/california/fallbrook/quality-inn-hotels/caa69?source=gyxt">Website</a>
         </li>
         <li>
