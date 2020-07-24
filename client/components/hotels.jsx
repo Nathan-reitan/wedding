@@ -9,15 +9,15 @@ export default function Hotels(props) {
       </div>
       <ol>
         <li>
-          Pala Mesa Resort
+          Pala Mesa Resort (2.1 miles)
           <a href="https://www.palamesa.com/">Website</a>
         </li>
         <li>
-          Quality Inn Fallbrook
+          Quality Inn Fallbrook (3.6 miles)
           <a href="https://www.choicehotels.com/california/fallbrook/quality-inn-hotels/caa69?source=gyxt">Website</a>
         </li>
         <li>
-          Pala Casino Spa & Resort
+          Pala Casino Spa & Resort (8.4 miles ~15mins)
           <a href="https://www.palacasino.com/">Website</a>
         </li>
         <li></li>
