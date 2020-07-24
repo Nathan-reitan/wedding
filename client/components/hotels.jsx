@@ -5,7 +5,12 @@ export default function Hotels(props) {
     <div>
       <h1>Hotels</h1>
       <div>
-      We have taken the time to locate some hotels in the area, please see the list below:
+        <p>
+          We have taken the time to locate some hotels in the area, please see the list below:
+        </p>
+        <p>
+          Estimate times are subject to traffic, please check the time morning of to get the most accurate time based on traffic
+        </p>
       </div>
       <ol>
         <li>
@@ -28,6 +33,5 @@ export default function Hotels(props) {
         <li></li>
       </ol>
     </div>
-
   );
 }
