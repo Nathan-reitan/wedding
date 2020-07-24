@@ -10,6 +10,16 @@ nav{
   background-color: rgba(73, 69, 69, .5);
 }
 
+.hotelList{
+  background-color: rgba(73, 69, 69, .5);
+  color: white;
+}
+
+.hotelList>li>a{
+  color: #800020;
+  font-weight: bold;
+}
+
 .cursive{
 font-family: 'Dancing Script', cursive;
 }

@@ -28,26 +28,3 @@ export default class Location extends React.Component {
     );
   }
 }
-
-// export default function initMap() {
-//   const map = new google.maps.Map(
-//     document.getElementById('map'), {
-//       ,
-//       center: {  }
-//     });
-// var infoWindow = new google.maps.InfoWindow();
-// infoWindowArr.push(infoWindow);
-// var contentString = {
-//   location: '530 Stewart Canyon Road, Fallbrook, Ca 92028',
-//   name: 'Los Willows',
-//   latlong: '33.379910-117.163809'
-// };
-// contentStringArr.push(contentString);
-// addMarker(map, json._embedded.events[i]);
-// var yourMarker = new google.maps.Marker({ position: yourLocation, map: map });
-
-//   return (
-//     <div></div>
-//   );
-
-// }
