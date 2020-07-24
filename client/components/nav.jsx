@@ -9,6 +9,7 @@ export default function Nav(props) {
           <li className='mr-3'><Link to='/rsvp'>RSVP</Link></li>
           <li className='mx-3'><Link to='/main'>Our Story</Link></li>
           <li className='mx-3'><Link to='/location'>Location</Link></li>
+          <li className='mx-3'><Link to='/hotels'>Hotels</Link></li>
           <li className='ml-3'><a href="">Registry</a></li>
         </ul>
       </div>
