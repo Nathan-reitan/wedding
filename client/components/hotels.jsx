@@ -3,13 +3,17 @@ import React from 'react';
 export default function Hotels(props) {
   return (
     <div>
-      <h1>Hotels</h1>
+      <h1 className="berkshire">Hotels</h1>
       <div className="berkshire">
         <p>
           We have taken the time to locate some hotels in the area, please see the list below:
         </p>
         <p>
-          <em>Estimate times are subject to traffic, please check the time morning of to get the most accurate time based on traffic</em>
+          <em>
+            <strong>
+              {"Estimate times are subject to traffic, please check the time on your phone's gps the morning of to get the most accurate time based on traffic."}
+            </strong>
+          </em>
         </p>
       </div>
       <ol className="hotelList">
