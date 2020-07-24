@@ -21,7 +21,7 @@ export default function Hotels(props) {
           <a href="https://www.palacasino.com/">Website</a>
         </li>
         <li>
-          Temecula Creek Inn
+          Temecula Creek Inn (10 miles ~18mins)
           <a href="https://www.temeculacreekinn.com/?NCK=8664483612">Website</a>
         </li>
         <li></li>
