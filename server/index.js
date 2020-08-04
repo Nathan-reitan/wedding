@@ -2,7 +2,7 @@ require('dotenv/config');
 const express = require('express');
 const nodemailer = require('nodemailer');
 
-// const db = require('./database');
+const db = require('./database');
 const staticMiddleware = require('./static-middleware');
 const sessionMiddleware = require('./session-middleware');
 
@@ -60,6 +60,8 @@ app.post('/api/rsvp', (req, res) => {
   const guestInfo = { guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies };
 
   main(guestInfo).catch(console.error);
+
+  db.query();
 
 });
 
