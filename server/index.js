@@ -61,7 +61,15 @@ app.post('/api/rsvp', (req, res) => {
 
   main(guestInfo).catch(console.error);
 
-  db.query();
+  const params = [guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies];
+  const sql = `insert into "rsvp"("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "guest2Name", "guest2Meal", "guest2Allergies")
+              values (default, $1, $2, $3, $4, $5, $6)
+              returning *
+              `;
+
+  db.query(sql, params)
+    .then(response => response.rows[0])
+    .then(data => res.status(201).json(data));
 
 });
 
