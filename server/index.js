@@ -2,7 +2,7 @@ require('dotenv/config');
 const express = require('express');
 const nodemailer = require('nodemailer');
 
-// const db = require('./database');
+const db = require('./database');
 const staticMiddleware = require('./static-middleware');
 const sessionMiddleware = require('./session-middleware');
 
@@ -60,6 +60,20 @@ app.post('/api/rsvp', (req, res) => {
   const guestInfo = { guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies };
 
   main(guestInfo).catch(console.error);
+
+  const params = [guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies];
+  const sql = `insert into "rsvp"("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "guest2Name", "guest2Meal", "guest2Allergies")
+              values (default, $1, $2, $3, $4, $5, $6)
+              returning *
+              `;
+
+  db.query(sql, params)
+    .then(response => response.rows[0])
+    .then(data => res.status(201).send(data))
+    .catch(err => {
+      console.error(err);
+      return res.status(500).send('An unexpected error has occurred');
+    });
 
 });
 
