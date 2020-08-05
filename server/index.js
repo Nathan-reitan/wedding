@@ -69,8 +69,7 @@ app.post('/api/rsvp', (req, res) => {
 
   db.query(sql, params)
     .then(response => response.rows[0])
-    // eslint-disable-next-line no-console
-    .then(data => console.log(data))
+    .then(data => res.status(201).send(data))
     .catch(err => {
       console.error(err);
       return res.status(500).send('An unexpected error has occurred');

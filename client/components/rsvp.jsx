@@ -7,9 +7,9 @@ export default class Rsvp extends React.Component {
       name1: '',
       meal1: '',
       allergies1: '',
-      name2: '',
-      meal2: '',
-      allergies2: ''
+      name2: 'N/A',
+      meal2: 'N/A',
+      allergies2: 'N/A'
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleChangeRadio = this.handleChangeRadio.bind(this);
@@ -32,9 +32,9 @@ export default class Rsvp extends React.Component {
       name1: '',
       meal1: '',
       allergies1: '',
-      name2: '',
-      meal2: '',
-      allergies2: ''
+      name2: 'N/A',
+      meal2: 'N/A',
+      allergies2: 'N/A'
     });
   }
 
@@ -64,7 +64,7 @@ export default class Rsvp extends React.Component {
             <h4>Guest 1:</h4>
             <div className='w-100'>
               <label htmlFor="name" className='w-50'>Name</label>
-              <input type="text" id='name1' name='name1' placeholder='First and Last Name' onChange={this.handleChange}/>
+              <input type="text" id='name1' name='name1' placeholder='First and Last Name' onChange={this.handleChange} required/>
             </div>
           </div>
           <div className='w-100'>
@@ -111,7 +111,7 @@ export default class Rsvp extends React.Component {
             </div>
             <div className='w-100'>
               <label htmlFor="allergies2" className='w-50'>Allergies <br/>(if none, type none)</label>
-              <input type="text" name="allergies" id="allergies2" placeholder='enter any allergies here' onChange={this.handleChange} required/>
+              <input type="text" name="allergies" id="allergies2" placeholder='enter any allergies here' onChange={this.handleChange}/>
             </div>
           </div>
           <input type="submit" value='submit'/>
