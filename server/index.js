@@ -51,10 +51,10 @@ async function main(guestInfo) {
 }
 
 app.post('/api/rsvp', (req, res) => {
-  const guest1Name = req.body.name1;
+  const guest1Name = req.body.firstName1 + ' ' + req.body.lastName1;
   const guest1Meal = req.body.meal1;
   const guest1Allergies = req.body.allergies1;
-  const guest2Name = req.body.name2;
+  const guest2Name = req.body.firstName2 + ' ' + req.body.lastName2;
   const guest2Meal = req.body.meal2;
   const guest2Allergies = req.body.allergies2;
   const guestInfo = { guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies };

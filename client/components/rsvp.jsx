@@ -4,10 +4,12 @@ export default class Rsvp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name1: '',
+      firstName1: '',
+      lastName1: '',
       meal1: '',
       allergies1: '',
-      name2: 'N/A',
+      firstName2: '',
+      lastName2: 'N/A',
       meal2: 'N/A',
       allergies2: 'N/A'
     };
@@ -29,10 +31,12 @@ export default class Rsvp extends React.Component {
     event.preventDefault();
     this.sendInfo(this.state);
     this.setState({
-      name1: '',
+      firstName1: '',
+      lastName1: '',
       meal1: '',
       allergies1: '',
-      name2: 'N/A',
+      firstName2: 'N/A',
+      lastName2: 'N/A',
       meal2: 'N/A',
       allergies2: 'N/A'
     });
@@ -45,10 +49,12 @@ export default class Rsvp extends React.Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        name1: guestInfo.name1,
+        firstName1: guestInfo.firstName1,
+        lastName1: guestInfo.lastName1,
         meal1: guestInfo.meal1,
         allergies1: guestInfo.allergies1,
-        name2: guestInfo.name2,
+        firstName2: guestInfo.firstName2,
+        lastName2: guestInfo.lastName2,
         meal2: guestInfo.meal2,
         allergies2: guestInfo.allergies2
       })
@@ -59,12 +65,16 @@ export default class Rsvp extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit} className='d-flex flex-wrap justify-content-end px-1'>
+        <form onSubmit={this.handleSubmit} className='d-flex flex-wrap justify-content-end p-1 border'>
           <div className='w-100'>
             <h4>Guest 1:</h4>
             <div className='w-100'>
-              <label htmlFor="name" className='w-50'>Name</label>
-              <input type="text" id='name1' name='name1' placeholder='First and Last Name' onChange={this.handleChange} required/>
+              <label htmlFor="firstName1" className='w-50'>First Name</label>
+              <input type="text" id='firstName1' name='firstName1' placeholder='First Name' onChange={this.handleChange} required/>
+            </div>
+            <div className='w-100'>
+              <label htmlFor="lastName1" className='w-50'>Last Name</label>
+              <input type="text" id='lastName1' name='lastName1' placeholder='Last Name' onChange={this.handleChange} required />
             </div>
           </div>
           <div className='w-100'>
@@ -89,8 +99,12 @@ export default class Rsvp extends React.Component {
             </div>
             <h4>Guest 2:</h4>
             <div className='w-100'>
-              <label htmlFor="name" className='w-50'>Name</label>
-              <input type="text" id='name2' name='name2' placeholder='First and Last Name' onChange={this.handleChange}/>
+              <label htmlFor="firstName2" className='w-50'>First Name</label>
+              <input type="text" id='firstName2' name='firstName2' placeholder='First Name' onChange={this.handleChange} />
+            </div>
+            <div className='w-100'>
+              <label htmlFor="lastName2" className='w-50'>Last Name</label>
+              <input type="text" id='lastName2' name='lastName2' placeholder='Last Name' onChange={this.handleChange}/>
             </div>
           </div>
           <div className='w-100'>
