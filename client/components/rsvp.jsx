@@ -8,7 +8,7 @@ export default class Rsvp extends React.Component {
       lastName1: '',
       meal1: '',
       allergies1: '',
-      firstName2: '',
+      firstName2: 'N/A',
       lastName2: 'N/A',
       meal2: 'N/A',
       allergies2: 'N/A'
