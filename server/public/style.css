@@ -43,3 +43,7 @@ nav>div>ul>li>a{
   height: 33vh;
   font-size: 2.5em;
 }
+
+.storyControl{
+  max-width: 800px;
+}

@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Main(props) {
   return (
-    <main className='px-1'>
-      <div className='kaushan'>
+    <main className='px-2 d-flex flex-wrap justify-content-center text-center'>
+      <div className='kaushan storyControl'>
         <h5 className='berkshire'>Our Story</h5>
         <div>
           <p className='my-2'>
@@ -20,7 +20,7 @@ export default function Main(props) {
             <img className='w-100' src="./images/mtWaterfall.jpg" alt="Montana Waterfall"/>
           </div>
           <p className='my-2'>
-            While in Montana, Nathan decided that he would (finally, according to Kenzie) pop the question and go get her a ring.
+            While in Montana, Nathan decided that he would (Finally, according to Kenzie) pop the question and go get her a ring.
             They planned a camping trip right outside of Yellowstone and on the way down they hiked to a waterfall where he asked her.
           </p>
           <div>
