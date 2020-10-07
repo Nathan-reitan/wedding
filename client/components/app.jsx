@@ -6,6 +6,7 @@ import Main from './main';
 import Location from './location';
 import Rsvp from './rsvp';
 import Hotels from './hotels';
+import Registry from './registry';
 
 export default class App extends React.Component {
 
@@ -20,6 +21,7 @@ export default class App extends React.Component {
           <Route path='/rsvp' component={Rsvp}/>
           <Route path='/main' component={Main} />
           <Route path='/hotels' component={Hotels} />
+          <Route path='/registry' component={Registry} />
         </Switch>
       </Router>
     );

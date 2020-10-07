@@ -48,6 +48,16 @@ nav>div>ul>li>a{
   max-width: 800px;
 }
 
+.venmo{
+  width: 300px
+}
+
+.registryButton{
+  width: 200px;
+  height: 100px;
+  background-color: darkred;
+}
+
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
