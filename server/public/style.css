@@ -47,3 +47,49 @@ nav>div>ul>li>a{
 .storyControl{
   max-width: 800px;
 }
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    .header{
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+    .header{
+      font-size: 1em;
+      font-weight: bold;
+    }
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : portrait) {
+   .header{
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape) {
+  .header{
+    font-size: 1em;
+    font-weight: bold;
+  }
+}

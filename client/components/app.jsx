@@ -12,8 +12,8 @@ export default class App extends React.Component {
   render() {
     return (
       <Router>
-        <Header />
         <Nav />
+        <Header />
         <Switch>
           <Route path='/' exact component={Main} />
           <Route path='/location' component={Location}/>
