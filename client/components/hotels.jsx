@@ -34,6 +34,22 @@ export default function Hotels(props) {
           Temecula Creek Inn (10 miles ~18mins)<br/>
           <a href="https://www.temeculacreekinn.com/?NCK=8664483612">Temecula Creek Website</a>
         </li>
+        <li>
+          Welk Resorts San Diego (11.4 miles ~19mins)<br/>
+          <a href="https://welkresorts.com/ca/san-diego/welk-resorts-san-diego/accommodations">Welk Resorts Website</a>
+        </li>
+        <li>
+          Springhill Suites Temecula (12.3 miles ~17mins)<br/>
+          <a href="https://www.marriott.com/hotels/travel/ontst-springhill-suites-temecula-valley-wine-country/">Springhill Suites Temecula Website</a>
+        </li>
+        <li>
+          Pechanga Casino (13.5 miles ~23mins)<br/>
+          <a href="https://www.pechanga.com/">Pechanga Casino Resort and Casino</a>
+        </li>
+        <li>
+          Embassy Suites Temecula (12.6 miles ~19mins)<br/>
+          <a href="https://www.hilton.com/en/hotels/laxtmes-embassy-suites-temecula-valley-wine-country/">Embassy Suites Temcula</a>
+        </li>
       </ol>
     </div>
   );
