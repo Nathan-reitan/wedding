@@ -11,7 +11,8 @@ export default class Rsvp extends React.Component {
       firstName2: 'N/A',
       lastName2: 'N/A',
       meal2: 'N/A',
-      allergies2: 'N/A'
+      allergies2: 'N/A',
+      submitted: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleChangeRadio = this.handleChangeRadio.bind(this);
@@ -38,7 +39,8 @@ export default class Rsvp extends React.Component {
       firstName2: 'N/A',
       lastName2: 'N/A',
       meal2: 'N/A',
-      allergies2: 'N/A'
+      allergies2: 'N/A',
+      submitted: true
     });
   }
 
