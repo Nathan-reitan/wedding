@@ -13,7 +13,7 @@ export default function Registry(props) {
       <div className='d-flex flex-wrap justify-content-center'>
         <div className='w-100 text-center my-1'>
           <p>
-            To view the Amazon registry please click the button below.
+            To view the Amazon registry, please click the button below.
           </p>
           <a href="https://www.amazon.com/wedding/mackenzie-downie-nathan-reitan--september-2021/registry/1W7Z6RB40THQB">
             <button className='registryButton rounded'>
