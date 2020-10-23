@@ -37,15 +37,14 @@ nav>div>ul>li>a{
 }
 
 .header{
-  background-image: url(./images/waterfall.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(45deg, rgba(98,98,101,1) 0%, rgba(221,221,232,1) 50%, rgba(98,98,101,1) 100%);
   height: 33vh;
   font-size: 2.5em;
 }
 
 .storyControl{
   max-width: 800px;
+  font-size: 1.5rem;
 }
 
 .venmo{
@@ -108,7 +107,7 @@ and (max-device-width : 812px)
 and (-webkit-device-pixel-ratio : 3)
 and (orientation : portrait) {
    .header{
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: bold;
   }
 }
@@ -121,5 +120,27 @@ and (orientation : landscape) {
   .header{
     font-size: 1em;
     font-weight: bold;
+    height: 40vh;
+  }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .header{
+    font-size: 3em;
+    font-weight: bold;
+  }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .header{
+    font-size: 3em;
+    font-weight: bold;
+    height: 45vh;
   }
 }
