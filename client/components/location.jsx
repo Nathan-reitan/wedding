@@ -12,7 +12,7 @@ export default class Location extends React.Component {
 
   render() {
     return (
-      <div style={{ height: '100vh', width: '100%' }}>
+      <div style={{ height: '80vh', width: '100%' }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyD0epOxsv3I7QHLEXWsCSGtFII6FoAHzgE' }}
           defaultCenter={this.center}
