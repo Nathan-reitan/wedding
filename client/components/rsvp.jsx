@@ -96,66 +96,66 @@ export default class Rsvp extends React.Component {
               </h4>
             </div>
           </div>
-          : <form onSubmit={this.handleSubmit} className='d-flex flex-wrap justify-content-end p-1 border'>
+          : <form onSubmit={this.handleSubmit} className='d-flex flex-wrap justify-content-end p-4'>
             <div className='w-100'>
-              <h4>Guest 1:</h4>
+              <h4 className="fredoka">Guest 1:</h4>
               <div className='w-100'>
-                <label htmlFor="firstName1" className='w-50'>First Name</label>
+                <label htmlFor="firstName1" className='lobster w-50'>First Name</label>
                 <input type="text" id='firstName1' name='firstName1' placeholder='First Name' onChange={this.handleChange} required />
               </div>
               <div className='w-100'>
-                <label htmlFor="lastName1" className='w-50'>Last Name</label>
+                <label htmlFor="lastName1" className='lobster w-50'>Last Name</label>
                 <input type="text" id='lastName1' name='lastName1' placeholder='Last Name' onChange={this.handleChange} required />
               </div>
             </div>
             <div className='w-100'>
-              <h4>Meal Options:</h4>
+              <h4 className="fredoka">Meal Options:</h4>
               <div className='w-75 mx-2'>
                 <div>
-                  <label htmlFor="steak" className='w-50'>Steak</label>
-                  <input type="radio" name='meal1' id='steak1' value='Steak' onChange={this.handleChangeRadio} />
+                  <label htmlFor="steak" className='lobster w-50'>Steak</label>
+                  <input type="radio" name='meal1' id='steak1' value='Steak' onChange={this.handleChangeRadio} required />
                 </div>
                 <div>
-                  <label htmlFor="fish" className='w-50'>Fish</label>
+                  <label htmlFor="fish" className='lobster w-50'>Fish</label>
                   <input type="radio" name='meal1' id='fish1' value='Fish' onChange={this.handleChangeRadio} />
                 </div>
                 <div>
-                  <label htmlFor="vegetarian" className='w-50'>Vegetarian</label>
+                  <label htmlFor="vegetarian" className='lobster w-50'>Vegetarian</label>
                   <input type="radio" name='meal1' id='vegetarian1' value='Vegetarian' onChange={this.handleChangeRadio} />
                 </div>
               </div>
               <div className='w-100'>
-                <label htmlFor="allergies1" className='w-50'>Allergies <br />(if none, type none)</label>
+                <label htmlFor="allergies1" className='lobster w-50'>Allergies <br />(if none, type none)</label>
                 <input type="text" name="allergies" id="allergies1" placeholder='enter any allergies here' onChange={this.handleChange} required />
               </div>
-              <h4>Guest 2:</h4>
+              <h4 className="fredoka">Guest 2:</h4>
               <div className='w-100'>
-                <label htmlFor="firstName2" className='w-50'>First Name</label>
+                <label htmlFor="firstName2" className='lobster w-50'>First Name</label>
                 <input type="text" id='firstName2' name='firstName2' placeholder='First Name' onChange={this.handleChange} />
               </div>
               <div className='w-100'>
-                <label htmlFor="lastName2" className='w-50'>Last Name</label>
+                <label htmlFor="lastName2" className='lobster w-50'>Last Name</label>
                 <input type="text" id='lastName2' name='lastName2' placeholder='Last Name' onChange={this.handleChange} />
               </div>
             </div>
             <div className='w-100'>
-              <h4>Meal Options:</h4>
+              <h4 className="fredoka">Meal Options:</h4>
               <div className='w-75 mx-2'>
                 <div>
-                  <label htmlFor="steak" className='w-50'>Steak</label>
+                  <label htmlFor="steak" className='lobster w-50'>Steak</label>
                   <input type="radio" name='meal2' id='steak2' value='Steak' onChange={this.handleChangeRadio} />
                 </div>
                 <div>
-                  <label htmlFor="fish" className='w-50'>Fish</label>
+                  <label htmlFor="fish" className='lobster w-50'>Fish</label>
                   <input type="radio" name='meal2' id='fish2' value='Fish' onChange={this.handleChangeRadio} />
                 </div>
                 <div>
-                  <label htmlFor="vegetarian" className='w-50'>Vegetarian</label>
+                  <label htmlFor="vegetarian" className='lobster w-50'>Vegetarian</label>
                   <input type="radio" name='meal2' id='vegetarian2' value='Vegetarian' onChange={this.handleChangeRadio} />
                 </div>
               </div>
               <div className='w-100'>
-                <label htmlFor="allergies2" className='w-50'>Allergies <br />(if none, type none)</label>
+                <label htmlFor="allergies2" className='lobster w-50'>Allergies <br />(if none, type none)</label>
                 <input type="text" name="allergies" id="allergies2" placeholder='enter any allergies here' onChange={this.handleChange} />
               </div>
             </div>

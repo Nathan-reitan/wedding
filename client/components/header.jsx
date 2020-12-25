@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function header(props) {
   return (
-    <header className='header d-flex justify-content-center align-items-end cursive'>
+    <header className='header d-flex justify-content-center align-items-end cursive m-0'>
       <div className='container'>
         <div className='text-center'>
           <div className='mx-2'>{"Nate and Kenzie's"}</div>
