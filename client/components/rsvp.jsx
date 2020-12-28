@@ -76,7 +76,7 @@ export default class Rsvp extends React.Component {
     return (
       <div>
         {this.state.submitted
-          ? <div className='border rsvpModal cursive d-flex flex-wrap justify-content-between p-1'>
+          ? <div className='rsvpModal cursive d-flex flex-wrap justify-content-between p-1'>
             <div className='w-100 d-flex justify-content-end'>
               <i className="fas fa-window-close" onClick={this.closeModal}></i>
             </div>
@@ -86,14 +86,31 @@ export default class Rsvp extends React.Component {
               </h1>
             </div>
             <div className='w-100 text-center'>
+              <h2>
+                The wedding is formal attire:
+              </h2>
               <h3>
-                We look forward to seeing you at the wedding!
+                <strong>
+                Slacks and a button up shirt &#40;tie is optional&#41;, dresses, jumpsuits, or rompers.
+                </strong>
               </h3>
+              <h3>
+                <strong>
+
+                </strong>
+              </h3>
+
               <h4 className='clearText'>
                 <strong>
-                  The ceremony will begin at 5pm, please plan on being there a little early and account for traffic.
+                  The ceremony will begin at 5pm SHARP, please plan on being there a little early and account for traffic.
                 </strong>
               </h4>
+              <h4 className='clearText'>
+                <strong>
+                  The shuttle will stop taking people from the parking lot to the venue at 4:30.
+                </strong>
+              </h4>
+
             </div>
           </div>
           : <form onSubmit={this.handleSubmit} className='d-flex flex-wrap justify-content-end p-4'>
