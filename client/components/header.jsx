@@ -1,15 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function header(props) {
   return (
-    <header className='header d-flex justify-content-center align-items-end cursive m-0'>
-      <div className='container'>
-        <div className='text-center'>
-          <div className='mx-2'>{"Nathan and Mackenzie's"}</div>
-          <div className='mx-2'>Wedding</div>
-          <div className='mx-2'>September 5, 2021</div>
-          <div className='mx-2'>Ceremony starts at 5pm </div>
-        </div>
+    <header className='header cursive m-2'>
+      <div className='text-center'>
+        <img src="./images/weddingHeader.png" alt="fancy text" className="headerImage"/>
+        <nav className="cursive">
+          <div className="d-flex align-items-end">
+            <ul className='list-unstyled d-flex justify-content-between flex-wrap w-100 navBar my-2'>
+              <li><Link to='/home'>Home</Link></li>
+              <li><Link to='/rsvp'>RSVP</Link></li>
+              <li><Link to='/main'>Our Story</Link></li>
+              <li><Link to='/location'>Location</Link></li>
+              <li><Link to='/hotels'>Hotels</Link></li>
+              <li><Link to='/registry'>Registry</Link></li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
   );
