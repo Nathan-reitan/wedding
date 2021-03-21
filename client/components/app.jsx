@@ -16,6 +16,7 @@ export default class App extends React.Component {
         <Header />
         <Switch>
           <Route path='/' exact component={Home}/>
+          <Route path='/home' component={Home}/>
           <Route path='/main' component={Main} />
           <Route path='/location' component={Location}/>
           <Route path='/rsvp' component={Rsvp}/>
