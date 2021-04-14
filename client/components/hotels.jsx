@@ -3,8 +3,8 @@ import React from 'react';
 export default function Hotels(props) {
   return (
     <div className='p-2'>
-      <h1 className="berkshire">Hotels</h1>
-      <div className="berkshire">
+      <h1 className="cursive">Hotels</h1>
+      <div>
         <p>
           We have taken the time to locate some hotels in the area, please see the list below:
         </p>
@@ -23,7 +23,7 @@ export default function Hotels(props) {
         </li>
         <li>
           Quality Inn Fallbrook (3.6 miles ~7mins)<br/>
-          <strong>Close but not great, equivalent to Motel 6.</strong><br/>
+          <strong className="qualityInn">Close but not great, equivalent to Motel 6.</strong><br/>
           <a href="https://www.choicehotels.com/california/fallbrook/quality-inn-hotels/caa69?source=gyxt">Quality Inn Website</a>
         </li>
         <li>

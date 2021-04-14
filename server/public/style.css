@@ -5,11 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 body{
-  background-color: rgba(73, 69, 69, 1);
+  background-color: rgb(105, 100, 100);
 }
 
 .headerImage{
-  width: 60%;
+  width: 40%;
+}
+
+.headerTitle{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #4d0013;
 }
 
 .hotelList{
@@ -55,14 +60,13 @@ div>a{
 }
 
 .header{
-  background-color: rgba(73, 69, 69, 1);
   font-size: 2.5em;
   position: relative;
 }
 
 .storyControl{
   max-width: 500px;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 .venmo{
@@ -138,6 +142,14 @@ form{
     width: 50%;
   }
 
+  .details{
+    font-size: 1.25rem;
+  }
+
+  .qualityInn{
+    text-decoration: underline;
+  }
+
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
@@ -169,6 +181,13 @@ form{
     padding: 20px;
     width: 100%;
   }
+  .headerTitle{
+    font-size: 2rem;
+  }
+  .headerImage{
+    width: 60%;
+  }
+
 }
 
 @media only screen

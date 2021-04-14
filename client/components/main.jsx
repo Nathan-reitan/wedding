@@ -3,8 +3,8 @@ import React from 'react';
 export default function Main(props) {
   return (
     <main className='px-2 d-flex flex-wrap justify-content-center text-center'>
-      <div className='kaushan storyControl'>
-        <h5 className='berkshire'>Our Story</h5>
+      <div className='storyControl'>
+        <h5>Our Story</h5>
         <div>
           <p className='my-2'>
             Nathan and Mackenzie met in 2014 and went on their first date to Knottfest.

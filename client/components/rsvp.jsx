@@ -97,12 +97,12 @@ export default class Rsvp extends React.Component {
               </h3>
               <h4 className='clearText'>
                 <strong>
-                  The ceremony will begin at 5pm <em>SHARP</em>, please plan on being there a little early and account for traffic.
+                  The ceremony will begin at 4pm <em>SHARP</em>, please plan on being there a little early and account for traffic.
                 </strong>
               </h4>
               <h4 className='clearText'>
                 <strong>
-                  The shuttle will stop taking people from the parking lot to the venue at 4:30.
+                  The shuttle will stop taking people from the parking lot to the venue at 3:30.
                 </strong>
               </h4>
             </div>

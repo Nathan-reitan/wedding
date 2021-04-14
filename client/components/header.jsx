@@ -6,6 +6,9 @@ export default function header(props) {
     <header className='header cursive m-2'>
       <div className='text-center'>
         <img src="./images/weddingHeader.png" alt="fancy text" className="headerImage"/>
+        <div>
+          <h1 className="headerTitle">Nathan + Mackenzie</h1>
+        </div>
         <nav className="cursive">
           <div className="d-flex align-items-end">
             <ul className='list-unstyled d-flex justify-content-between flex-wrap w-100 navBar my-2'>
