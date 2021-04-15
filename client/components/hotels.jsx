@@ -9,6 +9,9 @@ export default function Hotels(props) {
           We have taken the time to locate some hotels in the area, please see the list below:
         </p>
         <p>
+          AirBnB and VRBO are available as well.
+        </p>
+        <p>
           <em>
             <strong>
               {"Estimate times are subject to traffic, please check the time on your phone's gps the morning of to get the most accurate time based on traffic."}

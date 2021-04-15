@@ -17,6 +17,7 @@ export default class Location extends React.Component {
           bootstrapURLKeys={{ key: 'AIzaSyD0epOxsv3I7QHLEXWsCSGtFII6FoAHzgE' }}
           defaultCenter={this.center}
           defaultZoom={this.zoom}
+          yesIWantToUseGoogleMapApiInternals
         >
           <AnyReactComponent
             lat={33.379910}

@@ -17,6 +17,8 @@ export default function Main(props) {
       <div className='homeLocation'>
         <h4>WEDDING DAY</h4>
         <h6>Sunday, September 5, 2021</h6>
+        <h6>at</h6>
+        <h4>Los Willows Wedding Estate</h4>
       </div>
       <div>
         <h1>DETAILS</h1>
