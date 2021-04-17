@@ -20,20 +20,18 @@ export default function Main(props) {
         <h6>at</h6>
         <h4>Los Willows Wedding Estate</h4>
       </div>
-      <div>
+      <div className="detailsContainer">
         <h1>DETAILS</h1>
         <div className='my-3'>
           <strong>
             Ceremony starts promptly at 4:00pm, shuttle service ends at 3:30pm.
           </strong>
         </div>
-        <div className="d-flex flex-column align-items-start details">
-          <h6>
-            Dress Code: Formal Attire
-          </h6>
-          <div className="d-flex flex-column align-items-start">
-            <p>Women: dresses, jumpsuits/rompers, pants and blouse.</p>
-            <p>Men: slacks, button up shirt (tie & jacket optional)</p>
+        <div className="d-flex details justify-content-around">
+          <div>
+            <p><strong>Dress Code is formal attire.</strong></p>
+            <p>Women may wear dresses, jumpsuits/rompers, or pants and blouse.</p>
+            <p>Men should wear slacks and a button up. (tie & jacket optional)</p>
           </div>
         </div>
       </div>

@@ -142,8 +142,20 @@ form{
     width: 50%;
   }
 
+  .detailsContainer{
+    width: 75%;
+  }
+
   .details{
     font-size: 1.25rem;
+    width: 100%;
+  }
+
+  .titles{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 25%;
   }
 
   .qualityInn{
@@ -186,6 +198,14 @@ form{
   }
   .headerImage{
     width: 60%;
+  }
+
+  .detailsContainer{
+    width: 100%;
+  }
+
+  .details{
+    font-size: 1rem;
   }
 
 }
