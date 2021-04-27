@@ -252,7 +252,7 @@ export default class Rsvp extends React.Component {
               </div>
               : null
             }
-            <input type="submit" value='RSVP' className='btn' />
+            <input type="submit" value='RSVP' className='rsvpButton lobster' />
           </form>
         }
       </div>
