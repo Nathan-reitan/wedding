@@ -23,6 +23,13 @@ export default function Main(props) {
       <div className="detailsContainer">
         <h1>DETAILS</h1>
         <div className='my-3'>
+          <h3>
+            <strong>
+              Wedding is 18+ Only
+            </strong>
+          </h3>
+        </div>
+        <div className='my-3'>
           <strong>
             Ceremony starts promptly at 4:00pm, shuttle service ends at 3:30pm.
           </strong>
