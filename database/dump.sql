@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 10.12 (Ubuntu 10.12-0ubuntu0.18.04.1)
--- Dumped by pg_dump version 10.12 (Ubuntu 10.12-0ubuntu0.18.04.1)
+-- Dumped from database version 10.16 (Ubuntu 10.16-0ubuntu0.18.04.1)
+-- Dumped by pg_dump version 10.16 (Ubuntu 10.16-0ubuntu0.18.04.1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -101,6 +101,7 @@ ALTER TABLE ONLY public.rsvp ALTER COLUMN "rsvpId" SET DEFAULT nextval('public."
 --
 
 COPY public.rsvp ("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "guest2Name", "guest2Meal", "guest2Allergies") FROM stdin;
+1	Nathan Reitan	Bacon Wrapped Filet	none	N/A N/A	N/A	N/A
 \.
 
 
@@ -108,7 +109,7 @@ COPY public.rsvp ("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "gues
 -- Name: rsvp_rsvpId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."rsvp_rsvpId_seq"', 1, false);
+SELECT pg_catalog.setval('public."rsvp_rsvpId_seq"', 1, true);
 
 
 --
