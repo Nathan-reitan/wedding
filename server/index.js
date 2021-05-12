@@ -50,6 +50,12 @@ async function main(guestInfo) {
   console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 }
 
+app.get('/api/health-check', (req, res, next) => {
+  db.query('select \'successfully connected\' as "message"')
+    .then(result => res.json(result.rows[0]))
+    .catch(err => next(err));
+});
+
 app.post('/api/rsvp', (req, res) => {
   const guest1Name = req.body.firstName1 + ' ' + req.body.lastName1;
   const guest1Meal = req.body.meal1;
