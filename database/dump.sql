@@ -102,6 +102,7 @@ ALTER TABLE ONLY public.rsvp ALTER COLUMN "rsvpId" SET DEFAULT nextval('public."
 
 COPY public.rsvp ("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "guest2Name", "guest2Meal", "guest2Allergies") FROM stdin;
 1	Nathan Reitan	Bacon Wrapped Filet	none	N/A N/A	N/A	N/A
+2	Kenzie Downie	Bacon Wrapped Filet	N/A	Nathan Reitan	Grilled Portabella Mushroom and Vegetable Wellington	none
 \.
 
 
@@ -109,7 +110,7 @@ COPY public.rsvp ("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "gues
 -- Name: rsvp_rsvpId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."rsvp_rsvpId_seq"', 1, true);
+SELECT pg_catalog.setval('public."rsvp_rsvpId_seq"', 2, true);
 
 
 --
