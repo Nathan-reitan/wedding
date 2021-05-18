@@ -278,7 +278,7 @@ export default class Rsvp extends React.Component {
               </form>
               : <form onSubmit={this.handleSubmit} className='d-flex flex-wrap justify-content-end rsvpBorder p-1'>
                 <div className='w-100'>
-                  <h4 className="fredoka">Guest 2:</h4>
+                  <h4 className="fredoka">Guest 1:</h4>
                   <div className='w-100 d-flex flex-row justify-content-around'>
                     <div className='w-50'>
                       <label htmlFor="firstName2" className='lobster'>First Name</label>
