@@ -129,7 +129,8 @@ i:hover{
   cursor: pointer;
 }
 
-form{
+.rsvpForm{
+  width: 100%;
   background: linear-gradient(45deg, rgba(188,143,128,1) 0%, rgba(133,124,121,1) 47%, rgba(188,143,128,1) 100%);
 }
 
