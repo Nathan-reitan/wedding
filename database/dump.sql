@@ -103,6 +103,15 @@ ALTER TABLE ONLY public.rsvp ALTER COLUMN "rsvpId" SET DEFAULT nextval('public."
 COPY public.rsvp ("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "guest2Name", "guest2Meal", "guest2Allergies") FROM stdin;
 1	Nathan Reitan	Bacon Wrapped Filet	none	N/A N/A	N/A	N/A
 2	Kenzie Downie	Bacon Wrapped Filet	N/A	Nathan Reitan	Grilled Portabella Mushroom and Vegetable Wellington	none
+3	Stephanie Morgan	Crab Encrusted Sea Bass	None	Ed  Morgan	Bacon Wrapped Filet	None 
+4	Pat Downie	Crab Encrusted Sea Bass	None	N/A N/A	N/A	N/A
+5	Kim Reitan	Crab Encrusted Sea Bass	None	Christopher  Reitan	Bacon Wrapped Filet	Grapefruit
+6	Paul Downie	Bacon Wrapped Filet	None	N/A N/A	N/A	N/A
+7	Kenny Economy	Bacon Wrapped Filet	None	Nancy Economy	Bacon Wrapped Filet	None
+8	Leigh Ann Downie-Economy	Crab Encrusted Sea Bass	None	Scott Economy	Bacon Wrapped Filet	None
+9	Patrick Economy	Crab Encrusted Sea Bass	None	Ryan Economy	Crab Encrusted Sea Bass	None
+10	Nathan Reitan	Crab Encrusted Sea Bass	none	N/A N/A	N/A	N/A
+11	Nathan Reitan	Bacon Wrapped Filet	N/A	Nathan Reitan	Bacon Wrapped Filet	none
 \.
 
 
@@ -110,7 +119,7 @@ COPY public.rsvp ("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "gues
 -- Name: rsvp_rsvpId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."rsvp_rsvpId_seq"', 2, true);
+SELECT pg_catalog.setval('public."rsvp_rsvpId_seq"', 11, true);
 
 
 --
