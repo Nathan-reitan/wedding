@@ -171,7 +171,7 @@ export default class Rsvp extends React.Component {
                       </div>
                       <div className='w-100 d-flex flex-row justify-content-around'>
                         <div className='w-50'>
-                          <label htmlFor="vegetarian" className='lobster w-50'>Grilled Portabella Mushroom and Vegetable Wellington</label>
+                          <label htmlFor="vegetarian" className='lobster w-50'>Grilled Portobello Mushroom and Vegetable Wellington</label>
                         </div>
                         <div className='w-25'>
                           <input type="radio" name='meal1' id='vegetarian1' value='Grilled Portobello Mushroom and Vegetable Wellington' onChange={this.handleChangeRadio} />
@@ -253,7 +253,7 @@ export default class Rsvp extends React.Component {
                         </div>
                         <div className='w-100 d-flex flex-row justify-content-around'>
                           <div className='w-50'>
-                            <label htmlFor="vegetarian" className='lobster w-50'>Grilled Portabella Mushroom and Vegetable Wellington</label>
+                            <label htmlFor="vegetarian" className='lobster w-50'>Grilled Portobello Mushroom and Vegetable Wellington</label>
                           </div>
                           <div className='w-25'>
                             <input type="radio" name='meal2' id='2' value='Grilled Portobello Mushroom and Vegetable Wellington' onChange={this.handleChangeRadio} />
