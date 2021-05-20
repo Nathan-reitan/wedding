@@ -110,8 +110,9 @@ COPY public.rsvp ("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "gues
 7	Kenny Economy	Bacon Wrapped Filet	None	Nancy Economy	Bacon Wrapped Filet	None
 8	Leigh Ann Downie-Economy	Crab Encrusted Sea Bass	None	Scott Economy	Bacon Wrapped Filet	None
 9	Patrick Economy	Crab Encrusted Sea Bass	None	Ryan Economy	Crab Encrusted Sea Bass	None
-10	Nathan Reitan	Crab Encrusted Sea Bass	none	N/A N/A	N/A	N/A
-11	Nathan Reitan	Bacon Wrapped Filet	N/A	Nathan Reitan	Bacon Wrapped Filet	none
+10	Robert Rothwell	Crab Encrusted Sea Bass	none	N/A N/A	N/A	N/A
+11	Skyler Bennis	Grilled Portabella Mushroom and Vegetable Wellington 	N/A	N/A	N/A	none
+12	Brenda Bos	Crab Encrusted Sea Bass	None	N/A N/A	N/A	N/A
 \.
 
 
@@ -119,7 +120,7 @@ COPY public.rsvp ("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "gues
 -- Name: rsvp_rsvpId_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public."rsvp_rsvpId_seq"', 11, true);
+SELECT pg_catalog.setval('public."rsvp_rsvpId_seq"', 13, true);
 
 
 --
