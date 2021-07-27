@@ -14,6 +14,7 @@ export default function Main(props) {
       <div className='w-100 d-flex justify-content-center'>
         <Link className='btn btn-secondary px-5' to='/rsvp'>RSVP</Link>
       </div>
+      <div className="deadlineBanner"><h1>PLEASE RSVP NO LATER THAN AUGUST 10TH</h1></div>
       <div className='homeLocation'>
         <h4>WEDDING DAY</h4>
         <h6>Sunday, September 5, 2021</h6>

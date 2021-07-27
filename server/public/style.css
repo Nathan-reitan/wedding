@@ -162,6 +162,14 @@ form{
     text-decoration: underline;
   }
 
+  .deadlineBanner{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #4d0013;
+  }
+
 @media only screen
   and (min-device-width: 375px)
   and (max-device-width: 667px)
