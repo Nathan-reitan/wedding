@@ -28,6 +28,7 @@ async function main(guestInfo) {
     to: 'weddingreitan@gmail.com',
     subject: 'Wedding RSVP from: ' + guestInfo.guest1Name,
     text: `
+      Attending?: ${guestInfo.attending},
       Guest 1: ${guestInfo.guest1Name},
       Guest 1 Meal: ${guestInfo.guest1Meal},
       Guest 1 Allergies: ${guestInfo.guest1Allergies},
@@ -36,6 +37,7 @@ async function main(guestInfo) {
       Guest 2 Allergies: ${guestInfo.guest2Allergies}
     `,
     html: `<ol>
+            <li>Attending?: <strong>${guestInfo.attending}</strong>,</li>
             <li>Guest 1: ${guestInfo.guest1Name},</li>
             <li>Guest 1 Meal: ${guestInfo.guest1Meal},</li>
             <li>Guest 1 Allergies: ${guestInfo.guest1Allergies},</li>
@@ -50,6 +52,12 @@ async function main(guestInfo) {
   console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 }
 
+app.get('/api/health-check', (req, res, next) => {
+  db.query('select \'successfully connected\' as "message"')
+    .then(result => res.json(result.rows[0]))
+    .catch(err => next(err));
+});
+
 app.post('/api/rsvp', (req, res) => {
   const guest1Name = req.body.firstName1 + ' ' + req.body.lastName1;
   const guest1Meal = req.body.meal1;
@@ -57,24 +65,27 @@ app.post('/api/rsvp', (req, res) => {
   const guest2Name = req.body.firstName2 + ' ' + req.body.lastName2;
   const guest2Meal = req.body.meal2;
   const guest2Allergies = req.body.allergies2;
-  const guestInfo = { guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies };
+  const attending = req.body.attending;
+  const guestInfo = { guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies, attending };
+  if (attending === 'false') {
+    return main(guestInfo).catch(console.error);
+  } else {
+    main(guestInfo).catch(console.error);
 
-  main(guestInfo).catch(console.error);
+    const params = [guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies];
+    const sql = `insert into "rsvp"("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "guest2Name", "guest2Meal", "guest2Allergies")
+                  values (default, $1, $2, $3, $4, $5, $6)
+                  returning *
+                  `;
 
-  const params = [guest1Name, guest1Meal, guest1Allergies, guest2Name, guest2Meal, guest2Allergies];
-  const sql = `insert into "rsvp"("rsvpId", "guest1Name", "guest1Meal", "guest1Allergies", "guest2Name", "guest2Meal", "guest2Allergies")
-              values (default, $1, $2, $3, $4, $5, $6)
-              returning *
-              `;
-
-  db.query(sql, params)
-    .then(response => response.rows[0])
-    .then(data => res.status(201).send(data))
-    .catch(err => {
-      console.error(err);
-      return res.status(500).send('An unexpected error has occurred');
-    });
-
+    db.query(sql, params)
+      .then(response => response.rows[0])
+      .then(data => res.status(201).send(data))
+      .catch(err => {
+        console.error(err);
+        return res.status(500).send('An unexpected error has occurred');
+      });
+  }
 });
 
 app.listen(process.env.PORT, () => {
