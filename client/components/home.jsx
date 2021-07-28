@@ -5,7 +5,7 @@ export default function Main(props) {
   return (
     <main className='p-2 d-flex flex-wrap flex-column justify-content-center align-items-center text-center'>
       <div className='w-100'>
-        <img className='w-100' src="./images/engagement.jpg" alt="Engagement Photo"/>
+        <img className='w-100' src="./images/engagementShrunk.png" alt="Engagement Photo"/>
       </div>
       <div className='homeDateAddressContainer'>
         <h3 className='homeDate'>September 5, 2021</h3>
