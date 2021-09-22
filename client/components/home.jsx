@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Main(props) {
+
   return (
     <main className='p-2 d-flex flex-wrap flex-column justify-content-center align-items-center text-center'>
       <div className='w-100'>

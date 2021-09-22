@@ -2,6 +2,15 @@ require('dotenv/config');
 const express = require('express');
 const nodemailer = require('nodemailer');
 
+// Import the filesystem module
+// const fs = require('fs');
+
+// const directorName = './server/public/images/gallery';
+
+// Function to get current filenames
+// in directory
+// const filenames = fs.readdirSync(directorName);
+
 const db = require('./database');
 const staticMiddleware = require('./static-middleware');
 const sessionMiddleware = require('./session-middleware');

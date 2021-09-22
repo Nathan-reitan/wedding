@@ -7,6 +7,7 @@ import Location from './location';
 import Rsvp from './rsvp';
 import Hotels from './hotels';
 import Registry from './registry';
+import Gallery from './gallery';
 
 export default class App extends React.Component {
 
@@ -19,6 +20,7 @@ export default class App extends React.Component {
           <Route path='/home' component={Home}/>
           <Route path='/main' component={Main} />
           <Route path='/location' component={Location}/>
+          <Route path='/gallery' component={Gallery}/>
           <Route path='/rsvp' component={Rsvp}/>
           <Route path='/main' component={Main} />
           <Route path='/hotels' component={Hotels} />
