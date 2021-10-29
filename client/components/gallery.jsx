@@ -1,5 +1,5 @@
 import React from 'react';
-import GalleryImage from './galleryImage';
+import ImageGallery from 'react-image-gallery';
 
 export default class Gallery extends React.Component {
 
@@ -15,27 +15,24 @@ export default class Gallery extends React.Component {
   }
 
   getGallery() {
+    const tempArr = [];
     fetch('/api/gallery')
       .then(resp => resp.json())
       .then(data => {
-        return this.setState(state => ({
-          gallery: data
-        }));
+        for (let i = 0; i < data.length; i++) {
+          tempArr[i] = {
+            original: data[i],
+            thumbnail: data[i]
+          };
+        }
       });
+    this.setState({ gallery: tempArr });
   }
 
   render() {
     return (
       <div>
-        {
-          this.state.gallery.map(image => {
-            let key = 0;
-            key++;
-            return (
-              <GalleryImage key={key} file={image}/>
-            );
-          })
-        }
+        <ImageGallery items={this.state.gallery}/>
       </div>
     );
   }
